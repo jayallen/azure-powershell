@@ -31,8 +31,8 @@ namespace Tools.Common.Helpers
                 throw new ArgumentNullException(nameof(path));
             }
 
-            var result = path.TrimEnd(Path.PathSeparator);
-            var lastSlash = result.LastIndexOf(Path.PathSeparator);
+            var result = path.TrimEnd(Path.DirectorySeparatorChar);
+            var lastSlash = result.LastIndexOf(Path.DirectorySeparatorChar);
             if (lastSlash > 0)
             {
                 result = result.Substring(lastSlash + 1);
